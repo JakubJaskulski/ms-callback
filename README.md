@@ -62,4 +62,21 @@ node index.js
 2. Open `http://localhost:3000` in your browser
 3. Clink on "Login with Microsoft"
 4. Consent to the permissions
-5. You should see your access token in browser and console
+5. You should see your access token in console
+6. Click on "Create Teams Meeting"
+7. You should see a button "Join Teams Meeting"
+
+### Known Issues
+
+If Microsoft user doesn't have license or permissions to create Teams meeting, they will see error:
+
+```
+{
+    "statusCode": 403,
+    "code": "Forbidden",
+    "requestId": "7f050522-3a77-493c-96a4-b57b36552aad",
+    "date": "2025-09-02T08:46:27.000Z",
+    "body": "{\"code\":\"Forbidden\",\"message\":\"9024: Exception of type 'Microsoft.Skype.SkypeCast.SchedulerWebRole.BusinessLogic.Teams.Common.Exceptions.TeamsMeetingProcessorException' was thrown.\",\"innerError\":{\"date\":\"2025-09-02T10:46:27\",\"request-id\":\"7f050522-3a77-493c-96a4-b57b36552aad\",\"client-request-id\":\"31be66d5-8c64-f232-c681-5a72ee7d9809\"}}",
+    "headers": {}
+}
+```
