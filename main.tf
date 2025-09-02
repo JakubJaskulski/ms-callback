@@ -29,7 +29,7 @@ resource "azuread_application" "ms_callback_app" {
   required_resource_access {
     resource_app_id = "00000003-0000-0000-c000-000000000000"
     resource_access {
-      id = "a65f2972-a4f8-4f5e-afd7-69ccb046d5dc"
+      id   = "a65f2972-a4f8-4f5e-afd7-69ccb046d5dc"
       type = "Scope"
     }
   }
