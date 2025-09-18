@@ -15,7 +15,7 @@ let accessToken = null;
 app.get("/", (req, res) => {
     const authUrl = `https://login.microsoftonline.com/${TENANT_ID}/oauth2/v2.0/authorize?` +
         `client_id=${CLIENT_ID}&response_type=code&redirect_uri=${redirectUri}` +
-        `&scope=User.Read OnlineMeetings.ReadWrite Calendars.ReadWrite&state=12345`;
+        `&scope=User.Read OnlineMeetings.ReadWrite offline_access&state=12345`;
 
     res.send(`<a href="${authUrl}">Login with Microsoft</a>`);
 });
